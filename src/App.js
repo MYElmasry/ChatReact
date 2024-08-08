@@ -13,9 +13,7 @@ function App() {
   const joinRoom = async (user, room) => {
     try {
       const connection = new HubConnectionBuilder()
-        .withUrl("http://chstservice.runasp.net/chat", {
-          withCredentials: true, // Ensure credentials are sent
-        })
+        .withUrl("http://chstservice.runasp.net/chat")
         .configureLogging(LogLevel.Information)
         .build();
 
